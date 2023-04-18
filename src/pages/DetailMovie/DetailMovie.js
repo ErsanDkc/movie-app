@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel';
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
@@ -9,14 +9,14 @@ function DetailMovie() {
     const API_KEY = process.env.REACT_APP_API_KEY_MOVIE;
     const VIDEO_BASE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`;
 
-    const getSingleMovie =   async () => {
+    const getSingleMovie = useCallback(  async () => {
         try {
             const { data } = await axios(`${VIDEO_BASE_URL}`)
             setSingleMovie(data)
         } catch (error) {
             console.log("error:", error);
         }
-    }
+    },[])
 
     
 
@@ -24,7 +24,7 @@ function DetailMovie() {
         getSingleMovie()
         
         return () => { };
-    }, [])
+    }, [getSingleMovie])
 
     return (
         <div className='d-flex m-5 gap-5'>
