@@ -19,11 +19,11 @@ function Nav() {
         <nav className='bg-info bg-gradient text-light'>
             <Navbar>
                 <Container>
-                    <Navbar.Brand className='text-light fs-2'>Movie App</Navbar.Brand>
+                    <Navbar.Brand><NavLink to="/home"  className='text-light fs-2 text-decoration-none'>Movie App</NavLink></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            {logged ? <button onClick={handleClick} className='bg-info bg-gradient text-light fs-2 border-0 text-capitalize'>{username} Logout <FiLogOut /></button> : <NavLink to="/register" className='text-light fs-2'>Register</NavLink>}   
+                            {logged ? <button onClick={handleClick} className='bg-info bg-gradient text-danger fs-2 border-0 text-capitalize'><span className='text-light'>{username}</span> Logout <FiLogOut  /></button> : ""}   
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

@@ -1,7 +1,4 @@
 import React from 'react'
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-// import { useSelector } from 'react-redux';
 import image from "../image/image.jpg"
 import { useNavigate } from 'react-router-dom'
 
