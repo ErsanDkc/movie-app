@@ -15,12 +15,12 @@ function MovieCard({ data }) {
     <div style={{ width: "80%", margin: "0 auto" }} className='d-flex flex-row flex-wrap justify-content-center gap-3'>
       {
         data.map((item) =>
-          <div key={item.id} className="card movie-card" style={{ width: "18rem" }}>
+          <div key={item.id} className="card" style={{ width: "18rem" }}>
             <div style={{ width: "285px", height: "400px" }} className='mb-3'>
               <img src={item.poster_path ? `https://image.tmdb.org/t/p/original${item.poster_path}` : image} className="card-img-top object-fit-contain" alt={item.title} />
 
             </div>
-            <div className="card-body movie-card-content mt-2">
+            <div className="card-body mt-2">
               <h5 className="card-title mb-2">{item.title}</h5>
               <p className="card-text">{item.overview.substring(0, 100)}...</p>
 

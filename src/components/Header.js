@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import MovieCard from './MovieCard'
 import axios from 'axios'
-import Register from '../pages/Register/Register'
 
 function Header() {
   const [movieName, setMovieName] = useState("")
@@ -24,7 +23,11 @@ function Header() {
   
   const handleSubmit = async(e) => {
     e.preventDefault();
+    if(!movieName.trim()) {
+      return window.alert("Please enter movie name")
+    }
    await getMovies()
+
    setMovieName("")
   } 
 

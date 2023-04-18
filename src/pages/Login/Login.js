@@ -3,8 +3,17 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'
 import schema from './validations';
 import { useNavigate } from 'react-router-dom';
+import { useLogin } from '../../context/LoginContext';
+import { useEffect } from 'react';
 function Login() {
+
     const navigate = useNavigate()
+    const {setLogged,logged,setUserName} = useLogin()
+    useEffect(() => {
+        if(logged) {
+            navigate("/home")
+        }
+    },[logged,navigate])
     return (
         <>
             <Formik
@@ -14,8 +23,15 @@ function Login() {
                     password: "",
                 }}
                 validationSchema={schema}
-                onSubmit={(values, action) => {
+                onSubmit={(values) => {
+                    localStorage.setItem("info",JSON.stringify(values))
+                    setLogged(true)
                     navigate("/home")
+                    
+                    let user =  values.email.slice(0,(values.email.indexOf("@")))
+                    setUserName(user)
+                    localStorage.setItem("user",JSON.stringify(user))
+                    
                 }}
             >
                 {({ handleSubmit, handleChange, values, touched, errors }) => (
