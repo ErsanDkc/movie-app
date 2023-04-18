@@ -1,9 +1,10 @@
 import { Navigate, Outlet } from "react-router-dom"
 import { useLogin } from "../context/LoginContext"
 
-function ProductedRoute({element}) {
+function ProtectedRoute() {
     
     const {logged} = useLogin()
+    
   return (
     <div>
         {logged ? <Outlet/> : <Navigate  to="/" />}
@@ -11,4 +12,4 @@ function ProductedRoute({element}) {
   )
 }
 
-export default ProductedRoute
+export default ProtectedRoute
