@@ -10,7 +10,7 @@ function Nav() {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
-                            <NavLink to="/" className='text-light fs-2'>Login</NavLink>
+                            <NavLink to="/register" className='text-light fs-2'>Register</NavLink>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

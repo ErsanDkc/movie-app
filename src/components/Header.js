@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import MovieCard from './MovieCard'
 import axios from 'axios'
+import Register from '../pages/Register/Register'
 
 function Header() {
   const [movieName, setMovieName] = useState("")
