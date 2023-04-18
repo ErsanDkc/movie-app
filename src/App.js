@@ -3,7 +3,7 @@ import Login from "./pages/Login/Login";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import DetailMovie from "./pages/DetailMovie/DetailMovie";
-import ProductedRoute from "./pages/ProtectedRoute";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route element={<ProductedRoute />}>
+        <Route element={<ProtectedRoute />}>
           <Route path="/home" element={<Header />} />
           <Route path="/:id" element={<DetailMovie />} />
         </Route>

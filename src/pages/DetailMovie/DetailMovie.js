@@ -24,7 +24,7 @@ function DetailMovie() {
         getSingleMovie()
         
         return () => { };
-    }, [getSingleMovie])
+    }, [])
 
     return (
         <div className='d-flex m-5 gap-5'>
