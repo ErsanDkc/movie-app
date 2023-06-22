@@ -7,7 +7,7 @@ function Header() {
   const [data, setData] = useState([]);
 
   const API_KEY = process.env.REACT_APP_API_KEY_MOVIE;
-  const BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}`;
+  const BASE_URL = `https://api.themoviedb.org/search/movie?api_key=${API_KEY}`;
 
   const getMovies = async () => {
     try {

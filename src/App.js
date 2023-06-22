@@ -1,9 +1,11 @@
 import Nav from "./components/Navbar";
-import Login from "./pages/Login/Login";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import DetailMovie from "./pages/DetailMovie/DetailMovie";
 import ProtectedRoute from "./pages/ProtectedRoute";
+
+
+const Header = React.lazy(() => import("./components/Header"))
+const DetailMovie = React.lazy(() => import("./pages/DetailMovie/DetailMovie"))
+const Login = React.lazy(() => import("./pages/Login"))
 
 function App() {
   return (
