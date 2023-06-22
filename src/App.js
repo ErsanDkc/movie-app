@@ -1,6 +1,7 @@
 import Nav from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import React from "react";
 
 
 const Header = React.lazy(() => import("./components/Header"))
