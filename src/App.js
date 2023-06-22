@@ -5,7 +5,7 @@ import ProtectedRoute from "./pages/ProtectedRoute";
 
 const Header = React.lazy(() => import("./components/Header"))
 const DetailMovie = React.lazy(() => import("./pages/DetailMovie/DetailMovie"))
-const Login = React.lazy(() => import("./pages/Login"))
+const Login = React.lazy(() => import("./pages/Login/Login"))
 
 function App() {
   return (
