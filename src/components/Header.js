@@ -13,6 +13,7 @@ function Header() {
     try {
       const { data } = await axios(`${BASE_URL}&query=${movieName}`);
       setData(data.results);
+      console.log(data)
     } catch (error) {
       console.log("error:", error);
     }
