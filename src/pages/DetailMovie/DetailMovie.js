@@ -21,7 +21,7 @@ function DetailMovie() {
   useEffect(() => {
     getSingleMovie();
 
-    return () => {};
+  
   }, [getSingleMovie]);
 
   return (
