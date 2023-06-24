@@ -6,7 +6,7 @@ function DetailMovie() {
   const { id } = useParams();
   const [singleMovie, setSingleMovie] = useState([]);
 
-  const API_KEY = process.env.REACT_APP_API_KEY_MOVIE;
+  const API_KEY = 'c98600ffa0bbeeb52be8da3fbfaf185b'
   const VIDEO_BASE_URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`;
 
   const getSingleMovie = useCallback(async () => {
